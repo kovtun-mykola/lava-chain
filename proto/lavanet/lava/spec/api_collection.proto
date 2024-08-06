@@ -15,6 +15,7 @@ message ApiCollection {
   repeated ParseDirective parse_directives = 6;
   repeated Extension extensions = 7;
   repeated Verification verifications = 8;
+  bool websocket_disabled = 9;
 }
 
 message Extension {
@@ -50,7 +51,7 @@ message CollectionData {
   string api_interface = 1 [(gogoproto.moretags) = "mapstructure:\"api_interface\"", (gogoproto.jsontag) = "api_interface"];
   string internal_path = 2 [(gogoproto.moretags) = "mapstructure:\"internal_path\"", (gogoproto.jsontag) = "internal_path"];
   string type = 3 [(gogoproto.moretags) = "mapstructure:\"type\"", (gogoproto.jsontag) = "type"];
-	string add_on = 4 [(gogoproto.moretags) = "mapstructure:\"add_on\"", (gogoproto.jsontag) = "add_on"];
+  string add_on = 4 [(gogoproto.moretags) = "mapstructure:\"add_on\"", (gogoproto.jsontag) = "add_on"];
 }
 
 message Header {
